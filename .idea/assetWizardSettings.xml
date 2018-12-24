@@ -33,7 +33,6 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundColor" value="ffffff" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
                                       <entry key="foregroundImage" value="D:\Felix\Kuliah\Semester 5\IT Bootcamp\Android\Stuger\assets\Stuger Logo.png" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
@@ -51,8 +50,8 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="cropped" value="true" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="D:\Felix\Kuliah\Semester 5\IT Bootcamp\Android\Stuger\assets\Stuger Logo.png" />
-                                      <entry key="outputName" value="stuger_logo" />
+                                      <entry key="imageAsset" value="D:\Felix\Kuliah\Semester 5\IT Bootcamp\Android\Stuger\assets\Sample Profile Picture.png" />
+                                      <entry key="outputName" value="sample_profile_picture" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -75,7 +74,40 @@
         </entry>
         <entry key="vectorWizard">
           <value>
-            <PersistentState />
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="jar:file:/D:/Program%20Files/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_arrow_back_black_24dp.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_arrow_back_white_24dp" />
+                            <entry key="sourceFile" value="C:\Users\felix" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
           </value>
         </entry>
       </map>
