@@ -19,6 +19,9 @@
         <activity android:name=".DashboardActivity" />
         <activity android:name=".SignUpStepOneActivity" />
         <activity android:name=".SignUpStepTwoActivity"></activity>
+
+        <activity android:name=".ForumGeneral"></activity>
+
     </application>
 
 </manifest>
