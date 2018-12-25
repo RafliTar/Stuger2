@@ -36,6 +36,6 @@ public class ForumGeneral extends AppCompatActivity {
         listForumQuestion = new ArrayList<>();
 
         rvForumQuestion = findViewById(R.id.rv_forum_question);
-        s
+
     }
 }

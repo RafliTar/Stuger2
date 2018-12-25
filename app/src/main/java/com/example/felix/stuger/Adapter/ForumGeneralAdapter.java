@@ -53,7 +53,14 @@ public class ForumGeneralAdapter extends RecyclerView.Adapter<ForumGeneralAdapte
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            tvForumThread = itemView.findViewById(R.id.tv_forum_thread);
+            tvForumDescription = itemView.findViewById(R.id.tv_forum_description);
+            btnSubmit = itemView.findViewById(R.id.btn_submit_answer);
+        }
 
+        public void bind(ForumQuestion forumQuestion) {
+            tvForumThread.setText(forumQuestion.getForumThread());
+            tvForumDescription.setText(forumQuestion.getForumDescription());
         }
     }
 }
