@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForumGeneral">
+    tools:context=".PageQuestion">
 
     <include
         layout="@layout/toolbar"
@@ -16,18 +16,12 @@
         android:id="@+id/tv_recent_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pertanyaan terbaru:"
+        android:text="Ajukan pertanyaan:"
         android:layout_below="@+id/forum_general_toolbar"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"
         android:textColor="@color/colorBlack" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_forum_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_recent_question"
-        android:layout_margin="7dp"
-        ></android.support.v7.widget.RecyclerView>
+
 
 </RelativeLayout>
