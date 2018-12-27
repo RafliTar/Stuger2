@@ -7,10 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".ForumGeneral">
 
-    <include
-        layout="@layout/toolbar"
-        android:id="@+id/forum_general_toolbar"
-        ></include>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/forum_general_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/forum_general_toolbar">
+        </include>
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    <!--</RelativeLayout>-->
+
 
     <TextView
         android:id="@+id/tv_recent_question"
@@ -20,7 +31,8 @@
         android:layout_below="@+id/forum_general_toolbar"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="7dp"
-        android:textColor="@color/colorBlack" />
+        android:textColor="@color/colorBlack"
+        android:textSize="16dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_forum_question"

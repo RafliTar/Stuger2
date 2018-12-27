@@ -7,7 +7,6 @@
     <color name="colorWhite">#fff</color>
     <color name="colorBlue">#FF0015FF</color>
     <color name="colorLightBlue">#FF4476F4</color>
-    <color name="colorNavy">#202060</color>
-    <color name="colorOrange">#ff3300</color>
-    <color name="colorDarkBlue">#FF00027B</color>
+    <color name="colorOrange">#eb472b</color>
+    <color name="colorDarkBlue">#1e365c</color>
 </resources>
