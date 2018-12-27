@@ -58,15 +58,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_answer_box_title"
         android:layout_margin="10dp"
-        android:inputType="textMultiLine" />
+        android:background="@drawable/border"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:lines="6"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:scrollHorizontally="false"
+        />
 
     <Button
         android:id="@+id/btn_submit_answer"
         android:layout_width="wrap_content"
-        android:layout_height="24sp"
+        android:layout_height="24dp"
         android:layout_below="@+id/et_submit_answer"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
         android:layout_alignParentRight="true"
-        android:background="@color/colorOrange"
+        android:background="@drawable/btn_round_orange"
         android:text="SUBMIT"
         android:textColor="@color/colorWhite"/>
 
