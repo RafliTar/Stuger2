@@ -4,9 +4,11 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.felix.stuger.ForumGeneral;
@@ -35,6 +37,19 @@ public class ForumGeneralAdapter extends RecyclerView.Adapter<ForumGeneralAdapte
     @Override
     public void onBindViewHolder(@NonNull ForumGeneralAdapter.ViewHolder viewHolder, int i) {
         viewHolder.bind(listForumQuestion.get(i));
+
+        viewHolder.etSubmitAnswer.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                switch (event.getAction() & MotionEvent.ACTION_MASK){
+                    case MotionEvent.ACTION_UP:
+                        v.getParent().requestDisallowInterceptTouchEvent(false);
+                        break;
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -48,6 +63,7 @@ public class ForumGeneralAdapter extends RecyclerView.Adapter<ForumGeneralAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView tvForumThread, tvForumDescription;
+        EditText etSubmitAnswer;
         Button btnSubmit;
 
         public ViewHolder(@NonNull View itemView) {
@@ -56,6 +72,7 @@ public class ForumGeneralAdapter extends RecyclerView.Adapter<ForumGeneralAdapte
             tvForumThread = itemView.findViewById(R.id.tv_forum_thread);
             tvForumDescription = itemView.findViewById(R.id.tv_forum_description);
             btnSubmit = itemView.findViewById(R.id.btn_submit_answer);
+            etSubmitAnswer = itemView.findViewById(R.id.et_submit_answer);
         }
 
         public void bind(ForumQuestion forumQuestion) {

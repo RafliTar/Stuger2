@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Stuger</string>
+    <string-array name="jurusan">
+        <item>Jurusan</item>
+        <item>IPA</item>
+        <item>IPS</item>
+    </string-array>
+    
+    <string-array name="mata_pelajaran_ipa">
+        <item>Mata Pelajaran</item>
+        <item>Biologi</item>
+        <item>Fisika</item>
+        <item>Kimia</item>
+        <item>Matematika</item>
+    </string-array>
+
+    <string-array name="mata_pelajran_ips">
+        <item>Mata Pelajaran</item>
+        <item>Ekonomi</item>
+        <item>Sosiologi</item>
+        <item>Geografi</item>
+        <item>PPKN</item>
+    </string-array>
 </resources>

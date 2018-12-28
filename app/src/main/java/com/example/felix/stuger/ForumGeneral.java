@@ -66,8 +66,8 @@ public class ForumGeneral extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(rvForumQuestion.getContext(), DividerItemDecoration.VERTICAL);
         rvForumQuestion.addItemDecoration(dividerItemDecoration);
 
-        BoundaryItemDecoration itemDecoration = new BoundaryItemDecoration(this, R.color.colorBlack, 2);
-        rvForumQuestion.addItemDecoration(itemDecoration);
+        //BoundaryItemDecoration itemDecoration = new BoundaryItemDecoration(this, R.color.colorBlack, 2);
+        //rvForumQuestion.addItemDecoration(itemDecoration);
 
         final ForumGeneralAdapter forumGeneralAdapter = new ForumGeneralAdapter(this, listForumQuestion);
         rvForumQuestion.setAdapter(forumGeneralAdapter);
