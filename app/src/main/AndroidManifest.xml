@@ -17,12 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ForumGeneral" />
-        <activity android:name=".DashboardActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".PageQuestion"></activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PageQuestion" />
         <activity android:name=".SignUpStepOneActivity" />
-        <activity android:name=".SignUpStepTwoActivity"></activity>
-
+        <activity android:name=".SignUpStepTwoActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

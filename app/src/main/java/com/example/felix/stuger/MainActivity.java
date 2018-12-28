@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
 
 import java.util.regex.Matcher;
@@ -23,10 +26,16 @@ public class MainActivity extends AppCompatActivity {
     EditText etLoginEmail, etLoginPassword;
     TextView tvSignUp;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference myRef = database.getReference("message");
+//
+//        myRef.setValue("Hello, World!");
 
         btnSignIn = (Button)findViewById(R.id.btnSignIn);
         etLoginEmail = (EditText)findViewById(R.id.etLoginEmail);
