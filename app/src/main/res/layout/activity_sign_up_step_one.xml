@@ -36,11 +36,22 @@
     </RelativeLayout>
 
     <ImageView
+        android:id="@+id/ivSignUpProfile"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:src="@mipmap/sample_profile_picture"/>
+        android:src="@mipmap/sample_profile_picture" />
+
+    <Button
+        android:id="@+id/btnSignUpAddPicture"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Add Picture"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_round_blue"/>
 
     <EditText
         android:id="@+id/etSignUpName"

@@ -17,18 +17,22 @@ import android.widget.Toast;
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
 
+    Toolbar toolbar;
+    TextView toolbarTitle;
+    NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
-        TextView toolbarTitle = toolbar.findViewById(R.id.toolbar_dashboard_title);
+        toolbarTitle = toolbar.findViewById(R.id.toolbar_dashboard_title);
         setSupportActionBar(toolbar);
 
         drawer = findViewById(R.id.dashboard_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -36,8 +40,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuizFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_quiz);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
         }
 
 
@@ -45,15 +49,23 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        toolbarTitle = toolbar.findViewById(R.id.toolbar_dashboard_title);
         switch (menuItem.getItemId()) {
+            case R.id.nav_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+                toolbarTitle.setText("DASHBOARD");
+                break;
             case R.id.nav_quiz:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QuizFragment()).commit();
+                toolbarTitle.setText("QUIZ");
                 break;
             case R.id.nav_forum:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ForumFragment()).commit();
+                toolbarTitle.setText("FORUM");
                 break;
             case R.id.nav_leaderboard:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LeaderboardFragment()).commit();
+                toolbarTitle.setText("LEADERBOARD");
                 break;
 
         }
@@ -82,10 +94,13 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.PopProfile:
-                Toast.makeText(this, "MASUKIN PROFILE ACTIVITY DISINI", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+                toolbarTitle.setText("PROFILE");
+                navigationView.getCheckedItem().setChecked(false);
+
                 return true;
             case R.id.PopNotification:
-                Toast.makeText(this, "MASUKIN NOTIFICATION ACTIVITY DISINI", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "MASUKIN NOTIFICATION ACTIVITY/Fragment DISINI", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.PopSignOut:
                 Toast.makeText(this, "SIGN OUT DISINI", Toast.LENGTH_SHORT).show();
