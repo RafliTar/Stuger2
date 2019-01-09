@@ -4,4 +4,22 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_bright">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIPA"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180sp"
+        android:text="IPA"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIPS"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240sp"
+        android:text="IPS"
+        />
 </RelativeLayout>
